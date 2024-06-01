@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG's Portfolio</title>
+<link rel="stylesheet" href="styles.css"> <!-- Include the styles.css file -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About</a>
+  </nav>
+    <div class="logo-container"> <!-- Add a container for the logo -->
+      <a href="#" style="margin-right: 90px;"><img src="images\logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
+    </div>
+    <div class="logo-icons">
+      <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+      <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+        <div class="image">
+            <img src="images\homedp.png" alt="Home Display Picture">
+        </div>
+        <div class="text">
+            <h1>Bringing Vision to Life Through Video Editing and Design.</h1>
+            <p>Hello there! Welcome to my portfolio website. I'm dedicated to transforming ideas and concepts into visually stunning projects through the power of video editing.</p>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+</main>
+
+
+<footer>
+  <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
+</footer>
+
+<script>
+  // Get the current page URL
+  const currentPage = window.location.href;
+
+  // Get all the nav links
+  const navLinks = document.querySelectorAll('nav a');
+
+  // Loop through each nav link and check if its href matches the current page URL
+  navLinks.forEach(link => {
+      if (link.href === currentPage) {
+          link.classList.add('clicked'); // Add the 'clicked' class if the href matches the current page URL
+      }
+  });
+</script>
+</body>
+</html>

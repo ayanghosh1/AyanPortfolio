@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <style>
+        /* Your custom styles here */
+
+        .pricing-column {
+            float: left;
+            width: 33.33%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .pricing-card {
+            margin-top: 30px;
+            margin-right: 20px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 50px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card h2 {
+            font-size: 30px;
+            text-decoration: underline ;
+            color: #333;
+        }
+
+        .pricing-card p {
+            color: #666;
+        }
+
+        .pricing-text h1{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .pricing-card strong {
+            text-shadow: 0 0 1px rgb(0, 0, 0); 
+        }
+
+        .pricing-column:hover .pricing-card {
+            transform: translateY(-10px);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px; /* Add margin-bottom to the container */
+        }
+
+        .text-container {
+            margin: 50px auto; /* Center the text container and add margin */
+            background-color: rgb(57, 57, 57); /* Add black background */
+            color: white; /* Ensure text is readable on black background */
+            padding: 20px; /* Add padding for better appearance */
+            text-align: center; /* Center the text */
+            width: fit-content; /* Adjust width to fit content */
+            border-radius: 10px; /* Add border-radius for rounded corners */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pricing-column {
+                width: 100%;
+            }
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG's Portfolio - Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+      <div class="logo-container"> <!-- Add a container for the logo -->
+        <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
+      </div>
+      <div class="logo-icons">
+        <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+        <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+        <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+        <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+      </div>
+    </header>
+
+    <div class="pricing-text"><h1 style="text-decoration: underline;">Pricing</h1></div>
+
+    <div class="container">
+        <div class="pricing-column">
+            <div class="pricing-card">
+                <h2>BASIC</h2>
+                <p><strong style="color: gold ; font-size: 20px;">GOLD</strong></p>
+                <h3>US$15 /video</h3>
+                <p>⏰ 1 Min Running Time</p>
+                <p>3-day delivery</p>
+                <p>🗸 2 Revisions</p>
+                <p>🗸 Up to 1 minute running time</p>
+                <p>🗸 Color grading</p>
+                <p>🗸 Sound design & mixing</p>
+            </div>
+        </div>
+
+        <div class="pricing-column">
+            <div class="pricing-card">
+                <h2>INTERMEDIATE</h2>
+                <p><strong style="color: silver; font-size: 20px;">PLATINUM</strong></p>
+                <h3>US$35 /video</h3>
+                <p>⏰ 5-7 Min Running Time</p>
+                <p>3-day delivery</p>
+                <p>🗸 3 Revisions</p>
+                <p>🗸 Up to 5 minutes running time</p>
+                <p>🗸 Color grading</p>
+                <p>🗸 Sound design & mixing</p>
+            </div>
+        </div>
+
+        <div class="pricing-column">
+            <div class="pricing-card">
+                <h2>ADVANCED</h2>
+                <p><strong style="color: #3884ff; font-size: 20px;">DIAMOND</strong></p>
+                <h3>US$50 /video</h3>
+                <p>⏰ 10 Min Running Time</p>
+                <p>5-day delivery</p>
+                <p>🗸 3 Revisions</p>
+                <p>🗸 Up to 10 minutes running time</p>
+                <p>🗸 Color grading</p>
+                <p>🗸 Sound design & mixing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-container">
+        <h1 style="text-align: center;">So what are you waiting for?</h1>
+        <h2 style="text-align: center;">CONTACT Me</h2>
+        <h3 style="text-align: center;">for MORE !!</h3>
+    </div>
+    <footer style="margin-top: 150px;">
+        <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
+      </footer>
+</body>
+</html>

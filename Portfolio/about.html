@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG's Portfolio - About</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your custom styles here */
+        .about-text {
+            opacity: 1; /* Set opacity to 1 to make the text visible */
+            transition: opacity 0.5s ease-out; /* Add transition for smooth effect */
+        }
+
+        /* Add hover effect to the images */
+        .about-me img:hover {
+            transform: scale(1.05); /* Increase the size slightly on hover */
+            transition: transform 0.3s ease; /* Add transition for smooth effect */
+        }
+
+        /* Add hover effect to the images */
+        .about-me img:hover {
+            transform: scale(1.05); /* Increase the size slightly on hover */
+            transition: transform 0.3s ease; /* Add transition for smooth effect */
+        }
+
+        /* Define animation keyframes for fading in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* styles.css */
+        .about-text h2 {
+            font-size: 36px; /* Adjust the font size as needed */
+            font-weight: bolder;
+        }
+
+        .about-text p{
+            text-align: center;
+            max-width: 50%;
+        }
+
+        .editing-number {
+            opacity: 0; /* Initial opacity */
+            transition: opacity 0.5s ease-out; /* Add transition for smooth effect */
+        }
+
+        /* Add default list styles */
+        ul {
+            list-style-type: disc; /* Bulleted list style */
+            margin-left: 20px; /* Add left margin for better spacing */
+        }
+
+        ul li {
+            margin-bottom: 10px; /* Add bottom margin for better spacing between list items */
+        }
+
+        /* Style for the images */
+        .about-me {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-right: 50px;
+        }
+
+        .about-me img {
+            width: 450px; /* Adjust the width of the images */
+            margin-left: 80px; /* Add margin between text and image */
+            margin-bottom: 100px;
+            border: 2px solid black; /* Add border style */
+            border-radius: 10px; 
+        }
+
+        img[src="think.png"] {
+            border-radius: 10px;
+            border-width: 10px; /* Set border width */
+            border-style: solid; /* Set border style */
+            border-image: linear-gradient(to right, black, rgb(126, 124, 124)); /* Apply gradient border */
+            border-image-slice: 1; /* Ensure the gradient covers the entire border */
+        }
+
+        /* Apply the fadeIn animation to the about-text elements */
+        .about-text.fadeIn {
+            animation: fadeIn 0.5s ease-out;
+            opacity: 1; /* Ensure opacity is set to 1 when animation starts */
+        }
+
+        /* Scroll down button styles */
+        .scroll-down {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0.7;
+            cursor: pointer;
+            display: none; /* Initially hidden */
+        }
+
+        .scroll-down:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="about.html" class="nav-link">About</a>
+        </nav>
+        <div class="logo-container"> <!-- Add a container for the logo -->
+          <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
+        </div>
+        <div class="logo-icons">
+            <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+            <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+            <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+            <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+          </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="about-text">
+                <center>
+                    <h2>About Me</h2>
+                    <p>Hello there! I'm AG, a passionate video editor with years of experience in crafting captivating visual narratives.
+                    In this portfolio, you'll get a glimpse of my skills and the types of projects I've worked on. Feel free to explore!</p>
+                </center>
+            </div>
+            <div class="think">
+                <img src="images/think.png" alt="Think" style="width: 50%; height: auto;">
+            </div>
+        </section>
+                 
+        <section class="about-ayan">
+            <div class="about-me">
+                <div class="about-content">
+                    <h2>Qualifications</h2>
+                    <ul>
+                        <li>Passed from St. Joan's School with a remarkable score of 91% in ICSE and 90% in ISC boards.</li>
+                        <li>Completed 12th grade with a background in Computer Science.</li>
+                        <li>Pursuing a B.Tech degree from the Institute of Engineering and Management, Kolkata, specializing in Computer Science, Artificial Intelligence department, maintaining an impressive GPA of above 8.5 in every semester. Currently in the 4th year. Anticipated graduation in 2025.</li>
+                    </ul>
+                </div>
+                <img src="images/qualifications.jpg" alt="Image 1"> <!-- Add image on the right-hand side -->
+            </div>
+        </section>
+                
+        <section class="about-ayan">
+            <div class="about-me">
+                <div class="about-content">
+                    <h2>Technical Skills</h2>
+                    <ul>
+                        <li>Proficient in programming languages such as C, Java, and Python.</li>
+                        <li>Skilled in Frontend Development using Dart for App Development.</li>
+                        <li>Proficient in Frontend Development using HTML, CSS, and JavaScript for Website Development.</li>
+                        <li>Habituated with GitHub for version control and collaborative development.</li>
+                    </ul>
+                </div>
+                <img src="images/technical skills.jpg" alt="Image 2"> <!-- Add image on the right-hand side -->
+            </div>
+        </section>
+
+        <section class="about-ayan">
+            <div class="about-me">
+                <div class="about-content">
+                    <h2>Projects</h2>
+                    <ul>
+                        <li>Developed a mobile application featuring various functionalities like spin the wheel, quiz, and DP changer.</li>
+                        <li>Created a personal portfolio website and keen on expanding further in web development.</li>
+                        <li>Worked on individual projects focused on video editing and enhancement for over 5 years.</li>
+                    </ul>
+                </div>
+                <img src="images/projects.png" alt="Image 3"> <!-- Add image on the right-hand side -->
+            </div>
+        </section>
+
+        <section class="about-ayan">
+            <div class="about-me">
+                <div class="about-content">
+                    <h2>Unique Qualities</h2>
+                    <ul>
+                        <li>Adaptable to work under time pressure, ensuring timely delivery of projects.</li>
+                        <li>Independent worker capable of handling tasks efficiently without constant supervision.</li>
+                        <li>Creative thinker, bringing fresh ideas to the table for innovative solutions.</li>
+                        <li>Open to experimentation and eager to explore new concepts and technologies.</li>
+                    </ul>
+                </div>
+                <img src="images/unique.jpg" alt="Image 4"> <!-- Add image on the right-hand side -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll down button -->
+    <div class="scroll-down">Scroll Down</div>
+
+    <script>
+        // Function to handle scroll event
+        function handleScroll() {
+            const scrollButton = document.querySelector('.scroll-down');
+            if (window.scrollY > 0) {
+                scrollButton.style.display = 'none';
+            } else {
+                scrollButton.style.display = 'block';
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
+

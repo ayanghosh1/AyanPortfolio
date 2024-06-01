@@ -1,0 +1,444 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  margin-right: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5); /* lighter underline */
+  transition: width 0.3s ease;
+}
+
+nav a.clicked::after,
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #333;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  width: 30px;
+  height: auto;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+main {
+  margin-left: 100px;
+  margin-right: 100px; /* Add margin on both sides for PC version */
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* About page styles */
+
+.about-section {
+  padding: 20px 100px; /* Adjust padding as needed */
+  text-align: center; /* Center text */
+}
+
+
+
+.about-text {
+  display: inline-block;
+  margin-bottom: 100px;
+}
+
+
+
+.about-ayan {
+  text-align: left; /* Align content to the left */
+}
+
+.about-me {
+  display: inline-block; /* Ensure content stays in line */
+}
+
+.about-me h2 {
+  font-size: 28px; /* Adjust the font size for headings */
+  margin-top: 30px; /* Add space between headings */
+}
+
+.about-me ul {
+  margin-left: 50px;
+}
+
+.about-me li {
+  margin-bottom: 10px; /* Add spacing between list items */
+}
+
+@media only screen and (max-width: 768px) {
+  .about-section {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  .about-text {
+    display: block; /* Change display to block for better responsiveness */
+    margin-bottom: 50px; /* Adjust margin for better spacing */
+  }
+
+  .about-me {
+    margin-left: auto; /* Center content on smaller screens */
+    margin-right: auto;
+    max-width: 200px; /* Set maximum width for better readability */
+  }
+
+  .about-me h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .about-section {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+}
+
+.text h1 {
+  font-size: 36px; /* Increase font size for better readability */
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 20px; /* Increase font size for better readability */
+  margin-bottom: 20px;
+}
+
+/* Projects page styles */
+.project-section {
+  padding: 20px; /* Add more padding for better spacing */
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.video-container {
+  width: 50%;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 400px; /* Adjusted height for better viewing */
+}
+
+.video-info {
+  width: 40%;
+}
+
+.video-info h3 {
+  font-size: 24px; /* Increase font size for better readability */
+}
+
+/* Styles for displaying homedp.png image and text side by side */
+.content {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.image {
+  margin-right: 20px;
+}
+
+.image img {
+  width: 750px;
+  height: 750px;
+}
+
+.text {
+  flex: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .image {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+    text-align: center; /* Align image to the center */
+  }
+
+  .image img {
+    width: 100%; /* Make image responsive to container width */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Allow height to adjust proportionally */
+  }
+
+  .text {
+    text-align: center; /* Center text on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for tablets and smaller screens */
+  header {
+    padding: 10px 20px; /* Adjusted padding for smaller header */
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .social-icon {
+    margin-left: 5px;
+  }
+
+  main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .about-text {
+    display: block; /* Change display to block to stack elements vertically */
+    margin: 20px auto; /* Center the element horizontally and add some space around it */
+    max-width: 80%; /* Limit the width of the text container */
+  }
+
+  .video-wrapper {
+    flex-direction: column; /* Display videos in a column on smaller screens */
+    align-items: center; /* Center video and info */
+  }
+
+  .video-container,
+  .video-info {
+    width: 100%; /* Ensure full width for video and info */
+  }
+
+  .video-container iframe {
+    height: auto; /* Automatically adjust height */
+  }
+
+  .content {
+    flex-direction: column; /* Display content in a column on smaller screens */
+    align-items: center; /* Center content */
+    justify-content: center;
+  }
+
+  .image,
+  .text {
+    margin-right: 0; /* Remove right margin for better alignment */
+    margin-bottom: 20px; /* Add bottom margin for better spacing */
+  }
+  .image img {
+    width: 80%; /* Reduce image width for screens up to 768px */
+  }
+}
+
+/* Original styles for larger screens */
+.editing-software img {
+  margin-left: 50px;
+  width: 700px;
+  border: 5px solid rgb(99, 99, 99);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.editing-software img:hover {
+  transform: scale(1.05);
+}
+
+.editing-software {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.editing-software p {
+  font-size: 20px;
+  font-weight: light;
+  margin-left: 50px;
+}
+
+.editing-software h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+
+.editing-number {
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+  border: 3px solid black;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin-top: 170px;
+  margin-right: 100px;
+  left: 6%;
+  right: 50%;
+  text-align: center;
+}
+
+.editing-number:hover {
+  border: 3px solid rgb(70, 70, 70);
+  background-color: rgb(70, 70, 70);
+  color: white;
+}
+
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+
+  .video-info h3 {
+    font-size: 14px; /* Adjusted font size for screens up to 768px */
+  }
+  
+  .editing-software img {
+    width: 100%; /* Set image width to 100% to make it responsive */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Allow height to adjust proportionally */
+  }
+
+  .editing-software {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 40px; /* Increase margin for better spacing */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .editing-software p,
+  .editing-software h2,
+  .editing-number {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .about-text {
+    display: block; /* Change display to block to stack elements vertically */
+    margin: 20px auto; /* Center the element horizontally and add some space around it */
+    max-width: 80%; /* Limit the width of the text container */
+  }
+
+  .video-info h3 {
+    font-size: 16px; /* Adjusted font size for screens up to 1024px */
+  }
+  
+  .editing-software img {
+    width: 100%; /* Set image width to 100% to make it responsive */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Allow height to adjust proportionally */
+  }
+
+  .editing-software {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 40px; /* Increase margin for better spacing */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .editing-software p,
+  .editing-software h2,
+  .editing-number {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .video-container {
+    width: 50%; /* Increase width for screens up to 1024px */
+    max-width: 100%; /* Ensure it fills the available width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .video-container iframe {
+    height: 400px; /* Increase height for screens up to 1024px */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .video-container {
+    width: 70%; /* Increase width for screens up to 768px */
+    max-width: 100%; /* Ensure it fills the available width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .video-container iframe {
+    height: 300px; /* Increase height for screens up to 768px */
+  }
+}
+
+.about-text h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+}

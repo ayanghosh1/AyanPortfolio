@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .center {
+      text-align: center;
+      position: relative; /* Add relative positioning to the parent */
+      transform: translateY(-50%);
+      margin-top: 50px;
+      margin-bottom: 120px;
+    }
+    .center h1 {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.5s, color 0.5s; /* Adding transitions */
+      box-sizing: border-box; /* Include padding and border in total width and height */
+      vertical-align: middle; /* Align vertically */
+      position: absolute; /* Add absolute positioning */
+      top: 50%; /* Position from the top */
+      left: 50%; /* Position from the left */
+      transform: translate(-50%, -50%); /* Center the element */
+    }
+    .center h1:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black; /* Adding border */
+      border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Adding colorful border */
+      border-image-slice: 1; /* Make sure the whole border is filled with the gradient */
+    }
+    
+    .video-wrapper {
+      position: relative;
+    }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-thumbnail {
+      width: 100%;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .video-container:hover .video-thumbnail {
+      transform: scale(1.1);
+      opacity: 0.45; /* Lowering opacity for black fade-out effect */
+    }
+
+    .click-here-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-size: 60px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .video-container:hover .click-here-text {
+      opacity: 1;
+    }
+
+    /* Other styles */
+    .video-info h3 {
+      margin-top: 20px;
+    }
+  </style>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG's Portfolio - Projects</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+    <div class="logo-container"> <!-- Add a container for the logo -->
+      <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
+    </div>
+    <div class="logo-icons">
+      <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+      <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+    </div>
+  </header>
+  <main>
+    <div class="center">
+      <h1>An Intro.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/h1avLZ5cYWY?si=-OpWfbIzTVT1x5uj" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Sound Designing.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/e7jrJkuwhqk?si=gVE7s12fnDeW7xw7" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Gaming Videos.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/OFsE1VensF4?si=C-gQ4xCE1Dw5U2BT" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Reels/Shorts</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/QGXcrCNUeAk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Challenge Videos.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/84oyIlwTQf4?si=MkVpRgYgDEYSzY9Z" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Vlog Editing</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/G6Bx-s-616g?si=HQLyC40VdJOpIyS-" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Travel Vlog Editing / Color Grading</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/Kake3Xn6XDo?si=DS6463QzeAsOL4RH" target="_blank">
+            <img src="images/travel.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Others</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/A4rdaUEzWTs?si=vXJnqXSZek4zs9_2" target="_blank">
+            <img src="images/messi.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
+            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
+  </footer>
+  <script>
+    // Get the current page URL
+    const currentPage = window.location.href;
+
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Loop through each nav link and check if its href matches the current page URL
+    navLinks.forEach(link => {
+        if (link.href === currentPage) {
+            link.classList.add('clicked'); // Add the 'clicked' class if the href matches the current page URL
+        }
+    });
+  </script>
+</body>
+</html>
