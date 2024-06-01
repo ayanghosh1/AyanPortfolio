@@ -108,6 +108,42 @@
         .scroll-down:hover {
             opacity: 1;
         }
+
+        @media (max-width: 768px) {
+            .about-me {
+                flex-direction: column;
+                padding-right: 0;
+            }
+
+            .about-text h2 {
+                font-size: 28px;
+            }
+
+            .about-me img {
+                margin: 20px auto;
+                max-width: 110%;
+            }
+
+            .about-text p {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-text h2 {
+                font-size: 24px;
+            }
+
+            .about-me img {
+                margin: 10px auto;
+                max-width: 120%;
+            }
+
+            .about-text p {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+        }
     </style>
 </head>
 <body>
