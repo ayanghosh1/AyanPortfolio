@@ -69,6 +69,81 @@
     .video-info h3 {
       margin-top: 20px;
     }
+
+    @media only screen and (max-width: 1024px) {
+      .image {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        text-align: center; /* Align image to the center */
+      }
+
+      .image img {
+        width: 100%; /* Make image responsive to container width */
+        max-width: 100%; /* Ensure image does not exceed container width */
+        height: auto; /* Allow height to adjust proportionally */
+      }
+
+      .text {
+        text-align: center; /* Center text on smaller screens */
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      
+      .travel-vlog .video-info h3 {
+    font-size: 14px; /* Adjusted font size for screens up to 768px */
+    margin-bottom: 20px; /* Add margin to separate from the text under "Vlog Editing" */
+  }
+  
+  .editing-software img {
+    width: 100%; /* Set image width to 100% to make it responsive */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Allow height to adjust proportionally */
+  }
+
+  .editing-software {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 40px; /* Increase margin for better spacing */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .editing-software p,
+  .editing-software h2,
+  .editing-number {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+
+  /* Adjustments for Travel Vlog text */
+  .video-info h3 {
+    margin-bottom: 60px; /* Add margin to separate from the text under "Vlog Editing" */
+  }
+
+  .project-section-travel .video-wrapper img{
+      margin-top: 100px ;
+      width: 220px;
+    }
+
+    .video-container:hover .click-here-text {
+      opacity: 0;
+    }
+
+}
+
+    /* Ensuring landscape mode for all videos except for Reels/Shorts */
+    .video-container iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9; /* Landscape mode */
+    }
+
+    /* Specific styles for Reels/Shorts video */
+    .video-container.reels iframe {
+      aspect-ratio: 9 / 16; /* Portrait mode */
+    }
+
+    
   </style>
   
   <meta charset="UTF-8">
@@ -90,10 +165,10 @@
       <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
     </div>
     <div class="logo-icons">
-      <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
-      <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
-      <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
-      <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+      <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank" title="Twitter"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank" title="Instagram"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank" title="YouTube"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+      <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
     </div>
   </header>
   <main>
@@ -106,8 +181,8 @@
           <iframe src="https://www.youtube.com/embed/h1avLZ5cYWY?si=-OpWfbIzTVT1x5uj" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>
+            This showreel showcases my expertise in video editing, featuring seamless transitions, dynamic motion graphics, precise motion tracking, immersive sound design, and professional podcast editing. Each segment highlights my technical skills and creativity, demonstrating my ability to enhance visual storytelling and audio quality for diverse multimedia projects.</h3>
         </div>
       </div>
     </section>
@@ -120,8 +195,8 @@
           <iframe src="https://www.youtube.com/embed/e7jrJkuwhqk?si=gVE7s12fnDeW7xw7" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>This sound design showcase highlights my expertise in noise reduction, voice isolation, caption editing, and audio translation. Each example demonstrates my ability to enhance audio clarity by removing background noise, accurately isolating voices, editing captions for improved accessibility, and translating audio content. 
+            The result is high-quality, polished sound for a variety of multimedia projects, ensuring a seamless and engaging auditory experience.</h3>
         </div>
       </div>
     </section>
@@ -134,8 +209,7 @@
           <iframe src="https://www.youtube.com/embed/OFsE1VensF4?si=C-gQ4xCE1Dw5U2BT" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>In this gaming video edit, I infused comedic timing with perfect cuts, integrated hilarious assets, and added whimsical motion graphics to amplify amusement. Paired with engaging tunes, the result is a side-splitting journey through the gaming realm. Through clever editing, I transformed gameplay into a riotous adventure, ensuring viewers are not only entertained but also doubled over with laughter from start to finish.</h3>
         </div>
       </div>
     </section>
@@ -144,12 +218,11 @@
     </div>
     <section class="project-section">
       <div class="video-wrapper">
-        <div class="video-container">
+        <div class="video-container reels">
           <iframe src="https://www.youtube.com/embed/QGXcrCNUeAk" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>In these edited reels, I've enriched the narration with explanatory graphics, ensuring clarity and enhancing viewer understanding. Engaging sound effects further captivate audiences, creating an immersive experience. Through meticulous editing, I've crafted a seamless blend of visuals and audio, elevating storytelling to new heights. From enhancing perspective to fostering engagement, each element works harmoniously to deliver compelling and memorable content.</h3>
         </div>
       </div>
     </section>
@@ -162,8 +235,8 @@
           <iframe src="https://www.youtube.com/embed/84oyIlwTQf4?si=MkVpRgYgDEYSzY9Z" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>In these challenge video edits, I've elevated the experience with cinematic graphics and assets, ensuring each moment feels epic and engaging. With meticulously chosen cinematic sound effects, every challenge becomes more immersive and intense. Through precise cuts and seamless scripting, I've ensured the flow is smooth, enhancing viewer excitement. Visual representations not only engage but inspire, turning each challenge into a cinematic journey of determination and triumph.
+          </h3>
         </div>
       </div>
     </section>
@@ -176,15 +249,15 @@
           <iframe src="https://www.youtube.com/embed/G6Bx-s-616g?si=HQLyC40VdJOpIyS-" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>
+            In my vlog edits, I intertwine aesthetic music seamlessly, setting the tone and enhancing the mood without overshadowing the speaker's voice. Through meticulous cuts and smooth transitions, I maintain a dynamic pace, keeping viewers engaged from start to finish. With a keen eye for storytelling, each scene unfolds like a captivating narrative, inviting viewers to immerse themselves in the journey and hang onto every moment.</h3>
         </div>
       </div>
     </section>
-    <div class="center">
+    <div class="center travel-vlog">
       <h1>Travel Vlog Editing / Color Grading</h1>
     </div>
-    <section class="project-section">
+    <section class="project-section-travel">
       <div class="video-wrapper">
         <div class="video-container">
           <a href="https://youtu.be/Kake3Xn6XDo?si=DS6463QzeAsOL4RH" target="_blank">
@@ -193,8 +266,10 @@
           </a>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>
+          <span style="font-weight: bold;">(Click On The Image)</span><br>
+          In this travel vlog edit, I've infused cinematic dialogue lines to add drama and depth, transforming ordinary moments into captivating narratives. With carefully selected cinematic sound effects, every scene comes alive, immersing viewers in the journey. Leveraging expert color grading techniques, I've enhanced visuals to perfection, elevating the overall cinematic experience. From dialogue to sound and visuals, each element harmonizes to create an unforgettable travel adventure.</span>
+        </h3>
         </div>
       </div>
     </section>
@@ -210,8 +285,10 @@
           </a>
         </div>
         <div class="video-info">
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis suscipit tempore quia, provident accusantium iure numquam facilis consequuntur aliquid veniam atque quam officia, vero voluptatibus sit sint minus mollitia deserunt.
-            Sapiente, quia magni debitis iure accusantium suscipit saepe vitae. Asperiores ea voluptatem recusandae cum exercitationem et, corrupti repellendus, quidem deleniti aperiam architecto sunt! Omnis reprehenderit voluptas voluptatem, molestiae sint animi?</h3>
+          <h3>
+            <span style="font-weight: bold;">(Click On The Image)</span><br>
+            In this edit, I showcase my versatile editing skills beyond the typical realms. From vlogs to gaming videos, challenges to travel adventures, I seamlessly blend aesthetics, narrative, and technical finesse. With a diverse array of projects, I demonstrate proficiency in various editing styles, ensuring each video captivates and entertains. Whether it's adding humor, drama, or inspiration, I craft compelling content that leaves a lasting impression.
+        </h3>
         </div>
       </div>
     </section>
@@ -221,14 +298,14 @@
   </footer>
   <script>
     // Get the current page URL
-    const currentPage = window.location.href;
+    const currentPage = window.location.href.split(/[?#]/)[0];
 
     // Get all the nav links
     const navLinks = document.querySelectorAll('nav a');
 
     // Loop through each nav link and check if its href matches the current page URL
     navLinks.forEach(link => {
-        if (link.href === currentPage) {
+        if (link.href.split(/[?#]/)[0] === currentPage) {
             link.classList.add('clicked'); // Add the 'clicked' class if the href matches the current page URL
         }
     });
