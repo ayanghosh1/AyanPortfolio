@@ -1,157 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>   
-    <style>
-        /* Your custom styles here */
+<head>
+  <style>
+    .center {
+      text-align: center;
+      position: relative; /* Add relative positioning to the parent */
+      transform: translateY(-50%);
+      margin-top: 50px;
+      margin-bottom: 120px;
+    }
+    .center h1 {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.5s, color 0.5s; /* Adding transitions */
+      box-sizing: border-box; /* Include padding and border in total width and height */
+      vertical-align: middle; /* Align vertically */
+      position: absolute; /* Add absolute positioning */
+      top: 50%; /* Position from the top */
+      left: 50%; /* Position from the left */
+      transform: translate(-50%, -50%); /* Center the element */
+    }
+    .center h1:hover {
+      background-color: white;
+      color: black;
+      border: 2px solid black; /* Adding border */
+      border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Adding colorful border */
+      border-image-slice: 1; /* Make sure the whole border is filled with the gradient */
+    }
+    
+    .video-wrapper {
+      position: relative;
+    }
 
-        .pricing-column {
-            float: left;
-            width: 33.33%;
-            padding: 30px;
-            text-align: center;
-        }
+    .video-container {
+      position: relative;
+      overflow: hidden;
+    }
 
-        .pricing-card {
-            margin-top: 30px;
-            margin-right: 20px;
-            border: 1px solid #000000;
-            border-radius: 5px;
-            padding: 50px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
+    .video-thumbnail {
+      width: 100%;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
 
-        .pricing-card h2 {
-            font-size: 30px;
-            text-decoration: underline ;
-            color: #333;
-        }
+    .video-container:hover .video-thumbnail {
+      transform: scale(1.1);
+      opacity: 0.45; /* Lowering opacity for black fade-out effect */
+    }
 
-        .pricing-card p {
-            color: #666;
-        }
+    .click-here-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(0, 0, 0);
+      font-size: 60px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
 
-        .pricing-text h1{
-            margin-top: 30px;
-            text-align: center;
-            font-size: 50px;
-            font-weight: bolder;
-        }
+    .video-container:hover .click-here-text {
+      opacity: 1;
+    }
 
-        .pricing-card strong {
-            text-shadow: 0 0 1px rgb(0, 0, 0); 
-        }
+    /* Other styles */
+    .video-info h3 {
+      margin-top: 20px;
+    }
 
-        .pricing-column:hover .pricing-card {
-            transform: translateY(-10px);
-        }
+    @media only screen and (max-width: 1024px) {
+      .image {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        text-align: center; /* Align image to the center */
+      }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px; /* Add margin-bottom to the container */
-        }
+      .image img {
+        width: 100%; /* Make image responsive to container width */
+        max-width: 100%; /* Ensure image does not exceed container width */
+        height: auto; /* Allow height to adjust proportionally */
+      }
 
-        .text-container {
-            margin: 50px auto; /* Center the text container and add margin */
-            background-color: rgb(57, 57, 57); /* Add black background */
-            color: white; /* Ensure text is readable on black background */
-            padding: 20px; /* Add padding for better appearance */
-            text-align: center; /* Center the text */
-            width: fit-content; /* Adjust width to fit content */
-            border-radius: 10px; /* Add border-radius for rounded corners */
-        }
+      .text {
+        text-align: center; /* Center text on smaller screens */
+      }
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .pricing-column {
-                width: 100%;
-            }
-        }
+    @media only screen and (max-width: 768px) {
+      
+      .travel-vlog .video-info h3 {
+    font-size: 14px; /* Adjusted font size for screens up to 768px */
+    margin-bottom: 20px; /* Add margin to separate from the text under "Vlog Editing" */
+  }
+  
+  .editing-software img {
+    width: 100%; /* Set image width to 100% to make it responsive */
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Allow height to adjust proportionally */
+  }
 
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG's Portfolio - Projects</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="skills.html" class="nav-link">Skills</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="about.html" class="nav-link">About</a>
-      </nav>
-      <div class="logo-container"> <!-- Add a container for the logo -->
-        <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
-      </div>
-      <div class="logo-icons">
-        <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
-        <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
-        <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
-        <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
-      </div>
-    </header>
+  .editing-software {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 40px; /* Increase margin for better spacing */
+    margin-right: 0; /* Remove right margin */
+  }
 
-    <div class="pricing-text"><h1 style="text-decoration: underline;">Pricing</h1></div>
+  .editing-software p,
+  .editing-software h2,
+  .editing-number {
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
 
-    <div class="container">
-        <div class="pricing-column">
-            <div class="pricing-card">
-                <h2>BASIC</h2>
-                <p><strong style="color: gold ; font-size: 20px;">GOLD</strong></p>
-                <h3>US$15 /video</h3>
-                <p>⏰ 1 Min Running Time</p>
-                <p>3-day delivery</p>
-                <p>🗸 2 Revisions</p>
-                <p>🗸 Up to 1 minute running time</p>
-                <p>🗸 Color grading</p>
-                <p>🗸 Sound design & mixing</p>
-            </div>
-        </div>
+  /* Adjustments for Travel Vlog text */
+  .video-info h3 {
+    margin-bottom: 60px; /* Add margin to separate from the text under "Vlog Editing" */
+  }
 
-        <div class="pricing-column">
-            <div class="pricing-card">
-                <h2>INTERMEDIATE</h2>
-                <p><strong style="color: silver; font-size: 20px;">PLATINUM</strong></p>
-                <h3>US$35 /video</h3>
-                <p>⏰ 5-7 Min Running Time</p>
-                <p>3-day delivery</p>
-                <p>🗸 3 Revisions</p>
-                <p>🗸 Up to 5 minutes running time</p>
-                <p>🗸 Color grading</p>
-                <p>🗸 Sound design & mixing</p>
-            </div>
-        </div>
+  .project-section-travel .video-wrapper img{
+      margin-top: 100px ;
+      width: 220px;
+    }
 
-        <div class="pricing-column">
-            <div class="pricing-card">
-                <h2>ADVANCED</h2>
-                <p><strong style="color: #3884ff; font-size: 20px;">DIAMOND</strong></p>
-                <h3>US$50 /video</h3>
-                <p>⏰ 10 Min Running Time</p>
-                <p>5-day delivery</p>
-                <p>🗸 3 Revisions</p>
-                <p>🗸 Up to 10 minutes running time</p>
-                <p>🗸 Color grading</p>
-                <p>🗸 Sound design & mixing</p>
-            </div>
-        </div>
+    .video-container:hover .click-here-text {
+      opacity: 0;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%; /* Ensure the video takes up full height */
+      aspect-ratio: 16/9; /* Maintain aspect ratio */
+    }
+
+    /* Specific styles for Reels/Shorts video */
+    .project-section .video-container.reels iframe {
+      aspect-ratio: 9 / 16 !important; /* Portrait mode */
+    }
+
+}
+    
+  </style>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG's Portfolio - Projects</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+    <div class="logo-container"> <!-- Add a container for the logo -->
+      <a href="#" style="margin-right: 90px;"><img src="images/logo.png" alt="AG Portfolio Logo" class="logo zoom"></a> <!-- Make logo clickable -->
     </div>
-
-    <div class="text-container">
-        <h1 style="text-align: center;">So what are you waiting for?</h1>
-        <h2 style="text-align: center;">CONTACT Me</h2>
-        <h3 style="text-align: center;">for MORE !!</h3>
+    <div class="logo-icons">
+      <a href="https://x.com/aka_Vectorr?t=g_muXjmNl2zC9gNR0nu9RA&s=09" target="_blank" title="Twitter"><img src="images/twitter.jpg" alt="Twitter" class="social-icon"></a>
+      <a href="https://www.instagram.com/i.m.ayan__?igsh=MTNkam12eTEydGQ0NQ==" target="_blank" title="Instagram"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+      <a href="https://www.youtube.com/@AyanPortfolio/featured" target="_blank" title="YouTube"><img src="images/youtube.png" alt="YouTube" class="social-icon"></a>
+      <a href="https://www.linkedin.com/in/ayan-ghosh-5b50ab214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
     </div>
-    <footer style="margin-top: 150px;">
-        <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
-      </footer>
+  </header>
+  <main>
+    <div class="center">
+      <h1>SPECIAL MENTIONS</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/nxLA1ebcSZY?si=GRKLTQDi-k-JU9_F" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe src="https://youtube.com/embed/ZSWZ4eyPdZw?feature=share" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/trWn21lel2Q?si=lrnk3_lQ_5ONIo0E" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </section>
+    <div class="center">
+      <h1>An Intro.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/h1avLZ5cYWY?si=-OpWfbIzTVT1x5uj" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>
+            This showreel showcases my expertise in video editing, featuring seamless transitions, dynamic motion graphics, precise motion tracking, immersive sound design, and professional podcast editing. Each segment highlights my technical skills and creativity, demonstrating my ability to enhance visual storytelling and audio quality for diverse multimedia projects.</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Sound Designing.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/e7jrJkuwhqk?si=gVE7s12fnDeW7xw7" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>This sound design showcase highlights my expertise in noise reduction, voice isolation, caption editing, and audio translation. Each example demonstrates my ability to enhance audio clarity by removing background noise, accurately isolating voices, editing captions for improved accessibility, and translating audio content. 
+            The result is high-quality, polished sound for a variety of multimedia projects, ensuring a seamless and engaging auditory experience.</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Gaming Videos.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/OFsE1VensF4?si=C-gQ4xCE1Dw5U2BT" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>In this gaming video edit, I infused comedic timing with perfect cuts, integrated hilarious assets, and added whimsical motion graphics to amplify amusement. Paired with engaging tunes, the result is a side-splitting journey through the gaming realm. Through clever editing, I transformed gameplay into a riotous adventure, ensuring viewers are not only entertained but also doubled over with laughter from start to finish.</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Reels/Shorts</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container reels">
+          <iframe src="https://www.youtube.com/embed/QGXcrCNUeAk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>In these edited reels, I've enriched the narration with explanatory graphics, ensuring clarity and enhancing viewer understanding. Engaging sound effects further captivate audiences, creating an immersive experience. Through meticulous editing, I've crafted a seamless blend of visuals and audio, elevating storytelling to new heights. From enhancing perspective to fostering engagement, each element works harmoniously to deliver compelling and memorable content.</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Edit for Challenge Videos.</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/84oyIlwTQf4?si=MkVpRgYgDEYSzY9Z" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>In these challenge video edits, I've elevated the experience with cinematic graphics and assets, ensuring each moment feels epic and engaging. With meticulously chosen cinematic sound effects, every challenge becomes more immersive and intense. Through precise cuts and seamless scripting, I've ensured the flow is smooth, enhancing viewer excitement. Visual representations not only engage but inspire, turning each challenge into a cinematic journey of determination and triumph.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Vlog Editing</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/G6Bx-s-616g?si=HQLyC40VdJOpIyS-" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>
+            In my vlog edits, I intertwine aesthetic music seamlessly, setting the tone and enhancing the mood without overshadowing the speaker's voice. Through meticulous cuts and smooth transitions, I maintain a dynamic pace, keeping viewers engaged from start to finish. With a keen eye for storytelling, each scene unfolds like a captivating narrative, inviting viewers to immerse themselves in the journey and hang onto every moment.</h3>
+        </div>
+      </div>
+    </section>
+    <div class="center travel-vlog">
+      <h1>Travel Vlog Editing / Color Grading</h1>
+    </div>
+    <section class="project-section-travel">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/Kake3Xn6XDo?si=DS6463QzeAsOL4RH" target="_blank">
+            <img src="images/travel.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>
+          <span style="font-weight: bold;">(Click On The Image)</span><br>
+          In this travel vlog edit, I've infused cinematic dialogue lines to add drama and depth, transforming ordinary moments into captivating narratives. With carefully selected cinematic sound effects, every scene comes alive, immersing viewers in the journey. Leveraging expert color grading techniques, I've enhanced visuals to perfection, elevating the overall cinematic experience. From dialogue to sound and visuals, each element harmonizes to create an unforgettable travel adventure.</span>
+        </h3>
+        </div>
+      </div>
+    </section>
+    <div class="center">
+      <h1>Others</h1>
+    </div>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/A4rdaUEzWTs?si=vXJnqXSZek4zs9_2" target="_blank">
+            <img src="images/messi.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>
+            <span style="font-weight: bold;">(Click On The Image)</span><br>
+            In this edit, I showcase my versatile editing skills beyond the typical realms. From vlogs to gaming videos, challenges to travel adventures, I seamlessly blend aesthetics, narrative, and technical finesse. With a diverse array of projects, I demonstrate proficiency in various editing styles, ensuring each video captivates and entertains. Whether it's adding humor, drama, or inspiration, I craft compelling content that leaves a lasting impression.
+        </h3>
+        </div>
+      </div>
+    </section>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/hdCH3WI-Sn4?si=DpT1GMiT1Olgvaph" target="_blank">
+            <img src="images/documentary.png" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>
+            <span style="font-weight: bold;">(Click On The Image)</span><br>
+            In this documentary-style edit inspired by MagnetsMedia, I added motion graphics and a cohesive theme to enhance storytelling. With precise cuts and enriched sound effects, the narrative comes alive. I also ensured smooth transitions, making the viewing experience seamless and engaging. The result is a polished, captivating documentary that mirrors the engaging style of MagnetsMedia, holding the audience's attention throughout.        </h3>
+        </div>
+      </div>
+    </section>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container">
+          <a href="https://youtu.be/6u48g5ib3Vs?si=SKQyrHHuhwENbpQx" target="_blank">
+            <img src="images/kamla.jpg" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="click-here-text">Click Here</div>
+          </a>
+        </div>
+        <div class="video-info">
+          <h3>
+            <span style="font-weight: bold;">(Click On The Image)</span><br>
+            In this edit of the horror game Kamla, I focused on storytelling to immerse viewers fully. By crafting a compelling intro, I set the eerie tone, drawing viewers into the narrative. Precise cuts and engaging visuals maintain suspense, balancing humor with the game's chilling atmosphere. This approach ensures viewers stay engaged throughout, experiencing both the horror and the lighter moments in a cohesive, captivating journey.        </div>
+      </div>
+    </section>
+    <section class="project-section">
+      <div class="video-wrapper">
+        <div class="video-container reels">
+          <iframe src="https://www.youtube.com/embed/ZgCwms6Tl7w" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>In this reel edit, I emphasized vibrant color grading and smooth animations, transforming the visuals significantly from the original. I sectioned the video and added transitions and motion graphics in under 3 seconds, ensuring continuous engagement. The addition of super smooth zoom in and zoom out transitions further enhances the visual appeal, creating a polished, professional result that captivates viewers throughout.
+          </h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 AG's Portfolio. All rights reserved.</p>
+  </footer>
+  <script>
+    // Get the current page URL
+    const currentPage = window.location.href.split(/[?#]/)[0];
+
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Loop through each nav link and check if its href matches the current page URL
+    navLinks.forEach(link => {
+        if (link.href.split(/[?#]/)[0] === currentPage) {
+            link.classList.add('clicked'); // Add the 'clicked' class if the href matches the current page URL
+        }
+    });
+  </script>
 </body>
 </html>
+
